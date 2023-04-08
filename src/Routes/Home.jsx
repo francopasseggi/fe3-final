@@ -5,11 +5,11 @@ import { ContextGlobal } from '../Components/utils/global.context';
 
 const Home = () => {
   const { state } = React.useContext(ContextGlobal);
-  const { data, loading, error, theme } = state;
+  const { data, loading, error } = state;
 
 
   return (
-    <main className={theme}>
+    <main>
       <h1>Home</h1>
       {loading && <p>Loading data...</p>}
       {error && <p>Error loading data: {error}</p>}

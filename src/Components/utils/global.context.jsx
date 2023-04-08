@@ -72,6 +72,12 @@ export const ContextProvider = ({ children }) => {
     fetchData();
   }, [fetchData]);
 
+  useEffect(() => {
+    const bodyClasses = document.body.classList;
+    bodyClasses.remove(state.theme === 'light' ? 'dark' : 'light');
+    bodyClasses.add(state.theme);
+  }, [state.theme])
+
   // Render the provider with the memoized context value
   return (
     <ContextGlobal.Provider value={contextValue}>

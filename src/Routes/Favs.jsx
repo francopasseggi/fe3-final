@@ -4,10 +4,10 @@ import { ContextGlobal } from "../Components/utils/global.context";
 
 const Favs = () => {
   const { state } = useContext(ContextGlobal);
-  const { favorites, theme } = state;
+  const { favorites } = state;
 
   return (
-    <div className={`favs-container ${theme}`}>
+    <div className="favs-container">
       <h1>Favs</h1>
       <div className="card-grid">
         {favorites.map((favorite) => (

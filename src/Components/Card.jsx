@@ -17,13 +17,13 @@ const Card = ({ name, username, id }) => {
 
   return (
 
-    <div className="card">
+    <div className={`card ${state.theme}`}>
       <Link to={`/dentist/${id}`}>
         <h2>{name}</h2>
         <p>{username}</p>
       </Link >
       {!isInFavorites &&
-        <button onClick={addFav} className="favButton">Add fav</button>
+        <button onClick={addFav} className={`favButton ${state.theme}`}>Add fav</button>
       }
     </div>
 

@@ -3,13 +3,12 @@ import { Link } from 'react-router-dom';
 import { ContextGlobal } from './utils/global.context';
 
 const Navbar = () => {
-  const { state, toggleTheme } = useContext(ContextGlobal);
-  const { theme } = state;
+  const { toggleTheme } = useContext(ContextGlobal);
 
   return (
-    <nav className={theme}>
+    <nav
+    >
       <button
-        className={`theme-button ${theme === 'light' ? 'light' : 'dark'}`}
         onClick={toggleTheme}
       >
         Change theme
